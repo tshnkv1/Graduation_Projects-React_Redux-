@@ -1,0 +1,11 @@
+.ShoppingCart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .name{width: 30%;}
+    .count{width: 5%;}
+    .plus{background: #f3e8da;}
+    .minus{background: #f3e8da;}
+    .remove{background: #f3e8da;}
+}

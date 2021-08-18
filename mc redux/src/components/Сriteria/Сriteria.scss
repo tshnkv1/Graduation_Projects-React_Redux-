@@ -1,0 +1,23 @@
+.criteria {
+    margin: 25px 20px 0 20px;
+    padding-bottom: 25px;
+    border-bottom: 1px dashed #69420a;
+    text-align: justify;
+
+    img {
+        width: 80%;
+    }
+
+    p {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 850px) {
+    .criteria {
+
+        img {
+            width: 100%;
+        }
+    }
+}

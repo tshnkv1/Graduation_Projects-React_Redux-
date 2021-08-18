@@ -1,0 +1,44 @@
+.quality-container {
+    width: 85%;
+
+    .quality-header {
+        width: 100%;
+        background: #adbeb2;
+        padding: 5px;
+        text-align: left;
+
+        .quality-and-suppliers {
+            color: #4e2f19;
+            font-weight: bold;
+            font-size: 2.2em;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .text {
+        margin: 25px 20px 0 20px;
+        padding-bottom: 25px;
+        border-bottom: 1px dashed #69420a;
+        text-align: justify;
+
+        p {
+            padding-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .quality-container {
+        order: 2;
+        width: 100%;
+        padding: 0 5px;
+        
+        .quality-header {
+            
+            .quality-and-suppliers {
+                font-size: 1.5em;
+            }
+        }
+    }
+}

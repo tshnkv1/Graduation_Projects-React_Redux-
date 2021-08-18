@@ -47,9 +47,9 @@ class App extends React.PureComponent {
   }
 
   //обращение к Ajax
-  //componentDidMount() {
-  //  this.loadData();
-  //}
+  componentDidMount() {
+    this.loadData();
+  }
 
   //очистка корзины
   delete = (iD) => {
@@ -113,14 +113,15 @@ class App extends React.PureComponent {
 
   fetchSuccess = (loadedData) => {
     console.log('данные получены');
-    this.setState({
+    console.log(loadedData);
+    /*this.setState({
       dataReady:true,
-      catalog: loadedData.product,
-      all: loadedData.product,
-    });
+      catalog: loadedData,
+      all: loadedData,
+    });*/
   };
 
-  /*loadData = () => {
+  loadData = () => {
 
     isoFetch("http://localhost:3500/product", {
         method: 'post',
@@ -145,7 +146,6 @@ class App extends React.PureComponent {
     })
 
   };
-  */
 
   render() {
 
@@ -166,11 +166,14 @@ class App extends React.PureComponent {
           ?<div>загрузка данных...</div>
           :<Main catalogProduct={this.state.catalog} cbAddProduct={this.addToBasket}/>
         */}
-        <Main catalogProduct={this.props.catalog} cbAddProduct={this.addToBasket}/>
-        <ProductChosen 
-        choseProduct={this.state.product}
-        cbdelete={this.delete}
+        {/*
+        !this.state.dataReady
+          ?<div>загрузка данных...</div>
+          :<ProductChosen choseProduct={this.state.product}cbdelete={this.delete}
         />
+        */}
+        <Main catalogProduct={this.props.catalog} cbAddProduct={this.addToBasket}/>
+        <ProductChosen choseProduct={this.state.product} cbdelete={this.delete} />
         {/*<Quality /> */}
         
       </div>

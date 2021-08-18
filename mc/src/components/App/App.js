@@ -124,7 +124,7 @@ class App extends React.PureComponent {
   loadData = () => {
 
     isoFetch("http://localhost:3500/product", {
-        method: 'post',
+        method: 'get',
         headers: {
             "Accept": "application/json",
         },

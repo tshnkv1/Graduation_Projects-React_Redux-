@@ -22,6 +22,7 @@ function macStoreReducer(state=initState,action) {
     //получаем весь массив продуктов
     case PRODUCT_SET: {
       console.log(0);
+      console.log(action.idItem);
       let newState={...state,
         catalog: action.idItem,
       };

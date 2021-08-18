@@ -1,0 +1,57 @@
+.main-container {
+    width: 60%;
+    padding: 0px 1px;
+
+    .mainHeader {
+        width: 100%;
+        background: #adbeb2;
+        padding: 5px;
+        text-align: left;
+
+        .mc-products-header {
+            color: #4e2f19;
+            font-weight: bold;
+            font-size: 2.2em;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .main {
+        text-align: center;
+
+        .mainbanner {
+            width: 100%;
+            margin: 25px 0;
+            padding: 0 5px;
+        }
+    }
+
+    .main-contant {
+        padding: 0 5px;
+        display: flex;
+        align-content: stretch;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 950px) {
+    .main-container {
+        order: 3;
+        width: 75%;
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 850px) {
+    .main-container {
+        width: 100%;
+
+        .mainHeader {
+    
+            .mc-products-header {
+                font-size: 1.5em;
+            }
+        }
+    }
+}

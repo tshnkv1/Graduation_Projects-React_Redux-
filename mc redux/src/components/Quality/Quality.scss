@@ -26,6 +26,21 @@
             padding-bottom: 10px;
         }
     }
+
+    .criteria {
+        margin: 25px 20px 0 20px;
+        padding-bottom: 25px;
+        border-bottom: 1px dashed #69420a;
+        text-align: justify;
+    
+        img {
+            width: 80%;
+        }
+    
+        p {
+            padding: 10px 0;
+        }
+    }
 }
 
 @media (max-width: 950px) {
@@ -38,6 +53,18 @@
             
             .quality-and-suppliers {
                 font-size: 1.5em;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .quality-container {
+        
+        .criteria {
+
+            img {
+                width: 100%;
             }
         }
     }

@@ -10,20 +10,24 @@ import './ShoppingCart.scss';
 class ShoppingCart extends React.PureComponent {
 
   static propTypes = {
-    basket: PropTypes.array.isRequired,
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    count: PropTypes.number.isRequired,
   };
 
-  handleClickPlus = (EO) => {
-    this.props.dispatch(productPlusAC(this.props.basket.id));
+  handleClickPlus = () => {
+    //console.log(this.props.id);
+    this.props.dispatch(productPlusAC(this.props.id));
   }
 
-  handleClickMinus = (EO) => {
-    this.props.dispatch(productMinusAC(this.props.basket.id));
+  handleClickMinus = () => {
+    //console.log(this.props.id);
+    this.props.dispatch(productMinusAC(this.props.id));
   }
 
-  handleClickRemove = (EO) => {
-    console.log(this.props.basket.id);
-    this.props.dispatch(productDeleteAC(this.props.basket.id));
+  handleClickRemove = () => {
+    console.log(this.props.id);
+    this.props.dispatch(productDeleteAC(this.props.id));
   }
 
 
@@ -31,9 +35,9 @@ class ShoppingCart extends React.PureComponent {
   render() {
 
     return (
-      <div className="ShoppingCart" key={this.props.basket.id}>
-        <div className="name">{this.props.basket.name}</div>
-        <div className="count">{this.props.basket.count}</div>
+      <div className="ShoppingCart" key={this.props.id}>
+        <div className="name">{this.props.name}</div>
+        <div className="count">{this.props.count}</div>
         <button onClick={this.handleClickPlus} className="plus">+</button>
         <button onClick={this.handleClickMinus} className="minus">&minus;</button>
         <button onClick={this.handleClickRemove} className="remove">&times;</button>
@@ -44,10 +48,5 @@ class ShoppingCart extends React.PureComponent {
   }
 
 }
-const mapStateToProps = function (state) {
-  return {
-    basket: state.macStore.basket,
-  };
-};
 
-export default connect(mapStateToProps)(ShoppingCart);
+export default connect()(ShoppingCart);

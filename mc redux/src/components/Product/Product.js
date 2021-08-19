@@ -18,7 +18,6 @@ class Product extends React.PureComponent {
   hundleButtonClikedPlus = (EO) => {
     console.log(this.props.id);
     this.props.dispatch( productPlusAC(this.props.id));
-    //this.props.cbThisProduct(this.props.id);
   }
 
   render() {
@@ -42,4 +41,4 @@ class Product extends React.PureComponent {
 
 }
 
-export default Product;
+export default connect()(Product);

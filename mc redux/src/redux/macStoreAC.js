@@ -1,4 +1,4 @@
-const PRODUCT_SET = 'PRODUCT_DELETE';
+const PRODUCT_SET = 'PRODUCT_SET';
 
 const PRODUCT_DELETE = 'PRODUCT_DELETE';
 const PRODUCT_PLUS = 'PRODUCT_PLUS';
@@ -6,7 +6,7 @@ const PRODUCT_MINUS = 'PRODUCT_MINUS';
 
 //const PRODUCT_PLUS_FROM_PRODUCTcart = 'PRODUCT_PLUS_FROM_PRODUCTcart';
 const productSetAC=function(productArray) {
-  console.log('в AC '+ productArray);
+  console.log('в AC ', productArray);
   return {
     type: PRODUCT_SET,
     allproduct: productArray
@@ -22,7 +22,6 @@ const productDeleteAC=function(id) {
 }
 
 const productPlusAC=function(id) {
-  console.log(id);
   return {
     type: PRODUCT_PLUS,
     idItem: id
@@ -41,5 +40,4 @@ export {
   productDeleteAC, PRODUCT_DELETE,
   productPlusAC, PRODUCT_PLUS,
   productMinusAC, PRODUCT_MINUS,
-  //PRODUCT_PLUS_FROM_PRODUCTcart,
 }

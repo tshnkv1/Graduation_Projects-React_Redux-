@@ -24,12 +24,12 @@ class First extends React.PureComponent {
             { id:9, name:"Стрипс", price: 3.90, count: 1,  dzh: 941, cal: 225, squirrels: 13, fats: 11, carbohydrates: 19 }
           ]
     }
-
+// catalog={this.state.prod}
   render() {
 
     return  (
         <Provider store={store}>
-          <App catalog={this.state.prod}/>
+          <App/>
         </Provider>
     )
   }

@@ -15,22 +15,16 @@ class Main extends React.PureComponent {
     catalogProduct:PropTypes.array.isRequired,
   }
 
-
-
-  //cbChoseProduct = (productID) => {
-  //  this.props.cbAddProduct(productID);
-  //}
-
   render() {
+    console.log(this.props.catalogProduct);
 
-    /*const oneprod = this.props.catalogProduct.map( v =>
+    const oneprod = this.props.catalogProduct.map( v =>
       <Product key={v.id}
         id={v.id}
         name={v.name}
         price={v.price}
-        //cbThisProduct={this.cbChoseProduct}
         />
-      )*/
+      )
     
 
     return (
@@ -42,7 +36,7 @@ class Main extends React.PureComponent {
           <img className="mainbanner" src={mainBanner}/>
         </div>
         <div className="main-contant">
-          {/*oneprod*/}
+          {oneprod}
         </div>
       </div>
     )
